@@ -22,10 +22,7 @@ class SignIn extends React.Component{
         const {email, password} = this.state; 
         try{
             await auth.signInWithEmailAndPassword(email, password); 
-            this.setState({
-                email: '', 
-                password: ''
-            })
+            this.setState
         } catch(error){
             console.log(error); 
         }
