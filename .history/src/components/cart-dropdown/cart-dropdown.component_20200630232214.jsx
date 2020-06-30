@@ -6,22 +6,16 @@ import CartItem from '../cart-item/cart-item.component';
 
 import './cart-dropdown.styles.scss'; 
 
-const CartDropDown = ({cartItems}) => (
+const CartDropDown = () => (
     <div className='cart-dropdown'>
-        <div className='cart-items'>
-            {
-                cartItems.map(cartItem => (
-                    <CartItem key={cartItem.id} item={cartItem} />
-                ))
-            }
-        </div>
+        <div className='cart-items' />
         <CustomButton>GO TO CHECKOUT</CustomButton>
     </div>
 )
 
-const mapStateToProps = ({cart: {cartItems}}) => ({
+const mapsStateToProps = ({cart: {cartItems}}) => ({
     cartItems
 }); 
 
 
-export default connect(mapStateToProps)(CartDropDown); 
+export default connect()(CartDropDown); 
